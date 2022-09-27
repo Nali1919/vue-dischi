@@ -1,5 +1,6 @@
 <template>
   <main>
+    <SelectComponent />
     <div class="container">
      <div class="card" v-for="cd in cdList" :key="cd.title">
         <div class="card-image">
@@ -14,11 +15,16 @@
 </template>
 
 <script>
+import SelectComponent from './SelectComponent.vue'
 export default {
 name : 'MainComponent',
 props : {
     cdList:Array
+    },
+    components: {
+        SelectComponent
 }
+
 }
 </script>
 
